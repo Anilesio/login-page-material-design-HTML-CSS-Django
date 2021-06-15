@@ -1,0 +1,30 @@
+{% extends 'base_login.html' %}
+{% block content %}
+
+
+<section>
+    <div class="container">
+        <div class="row espaco-m-top-2">
+            <div class="col s12 m10 l10 offset-l1 offset-m1 center-align">
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <ul class="collection">
+                            <li class="collection-item grey lighten-4 lighten-4"><strong>{{message}}</strong> </li>
+                        </ul>
+                    {% endfor %}
+                {% endif %}
+
+
+                <h1>Parabéns {{request.user.first_name}} </h1>
+                <h1> </h1>
+                <h5><strong>Você concluiu o seu cadastro</strong></h5>
+                <div class="espaco-m-top-2">
+                    <a href="{% url 'accounts:logout-user' %}" class="btn red pulse">Terminar sessão</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

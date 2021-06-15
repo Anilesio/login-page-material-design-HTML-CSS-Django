@@ -1,0 +1,22 @@
+
+input.estilo-input{
+    border: 1px solid #e0e0e0 !important;
+    background-color: #fff;
+    transition: 0.3s;
+    width: 100%;
+    padding: 10px !important;
+    font-size: 14px;
+}
+
+  input.estilo-input:hover{
+    background-color: #e0e0e0;
+}
+
+input.estilo-input:focus{
+    
+    background-color: #e0e0e0;
+}
+
+.espaco-m-top-2{
+    margin-top: 10%;
+}

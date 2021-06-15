@@ -1,0 +1,26 @@
+.blog img{
+    margin: 0 auto;
+    transition: all 0.3s;
+    object-fit: cover;
+
+}
+
+.blog img:hover{
+    padding: 10px
+}
+
+@media screen and (min-width: 300px){
+.blog img{
+    width: 100%;
+}
+}
+
+@media screen and (min-width: 700px){
+    .blog img{
+        width: 100%;
+        border: none;
+        width: 200px;
+        height: 200px;
+        size: 100%;
+    }
+    }

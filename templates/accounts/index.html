@@ -1,0 +1,62 @@
+{% extends 'base_login.html' %}
+{% block content %}
+
+
+    
+    <section>
+        <div class="container">
+            <div class="row espaco-m-top-2">
+                <div class="col s12 m12 l12 center-align">
+                    <h4>Faça o seu login</h4>
+                </div>
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <ul class="collection">
+                            <li class="collection-item grey lighten-4 lighten-4"><strong>{{message}}</strong> </li>
+                        </ul>
+                    {% endfor %}
+                {% endif %}
+
+                <div class="col s12 m6 l6 offset-l3 offset-m3">
+                        <form  method="POST">
+                            {% csrf_token %}
+                                <div class="row">
+                                    <div class="col s12">
+                                        <input type="text" id="id_username" name="username" class="estilo-input browser-default">
+                                    <label for="">Username</label>
+                                    </div>
+                                </div>
+                                
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <input type="password" id="id_password" name="password" class="estilo-input browser-default">
+                                            <label for="">Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <button type="submit" class="btn col s12 orange">Entrar</button>
+                                        </div>
+                                        <div class="col s12 center-align">
+                                            <p>Ainda não possui uma conta? <a href="{% url 'accounts:cadastrar-usuario' %}">Crie uma</a></p>
+                                        </div>
+                                </div>
+                                </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container center">
+            <hr>
+
+            <p>Created by: Anilésio Xavier</p>
+            <a href="">linkedin</a>
+            <a href="">github</a>
+        </div>
+    </section>
+
+
+
+{% endblock %}

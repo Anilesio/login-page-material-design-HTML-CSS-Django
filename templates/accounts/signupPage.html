@@ -1,0 +1,82 @@
+{% extends 'base_login.html' %}
+{% block content %}
+
+
+    
+    <section>
+        <div class="container">
+            <div class="row espaco-m-top-2">
+                <div class="col s12 m12 l12 center-align">
+                    <h4>Crie uma conta</h4>
+                </div>
+
+                {% if messages %}
+                {% for message in messages %}
+                    <ul class="collection">
+                        <li class="collection-item grey lighten-4 lighten-4"><strong>{{message}}</strong> </li>
+                    </ul>
+                {% endfor %}
+            {% endif %}
+
+                <div class="col s12 m8 l8 offset-l2 offset-m2">
+                        <form  method="POST">
+                            {% csrf_token %}
+                                <div class="row">
+                                    <div class="col s12 m6 l6">
+                                        <input type="text" id="id_first_name" name="first_name" class="estilo-input browser-default">
+                                    <label for="">Primeiro nome</label>
+                                    </div>
+
+                                    <div class="col s12 m6 l6">
+                                        <input type="text" id="id_last_name" name="last_name" class="estilo-input browser-default">
+                                        <label for="">Último nome</label>
+                                    </div>
+                                </div>
+                                
+                                    <div class="row">
+                                        <div class="col s12 m6 l6">
+                                            <input type="email" id="id_email" name="email" class="estilo-input browser-default">
+                                            <label for="">Email</label>
+                                        </div>
+                                        <div class="col s12 m6 l6">
+                                            <input type="text" id="id_username" name="username" class="estilo-input browser-default">
+                                            <label for="">Username</label>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col s12 m6 l6">
+                                            <input type="password" id="id_password1" name="password1" class="estilo-input browser-default">
+                                            <label for="">Palavra-passe</label>
+                                        </div>
+                                        <div class="col s12 m6 l6">
+                                            <input type="password" id="id_password2" name="password2" class="estilo-input browser-default">
+                                            <label for="">Repita a Palavra-passe</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <button type="submit" class="btn col s12 green">Registar</button>
+                                        </div>
+                                        <div class="col s12 center-align">
+                                            <p>Já possui uma conta? <a href="{% url 'accounts:user-login' %} ">Entre</a></p>
+                                        </div>
+                                </div>
+                                </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container center">
+            <hr>
+
+            <p>Created by: Anilésio Xavier</p>
+            <a href="">linkedin</a>
+            <a href="">github</a>
+        </div>
+    </section>
+
+{% endblock %}

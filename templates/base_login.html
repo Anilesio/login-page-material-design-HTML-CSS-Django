@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/style.css' %} ">
+    <title>Login page</title>
+</head>
+<body>
+
+    <div style="padding: 10px; font-size: 2em; background-color:#aded64; width: 500px; font-weight: bold;">
+        HTML + CSS + Django(Python)
+    </div>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/materialize.min.js' %}"></script>
+
+</body>
+</html>
